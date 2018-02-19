@@ -1,0 +1,39 @@
+
+{
+    "clubadminApp": {
+        "member" : {
+            "home": {
+                "title": "Members",
+                "createLabel": "Create a new Member",
+                "createOrEditLabel": "Create or edit a Member"
+            },
+            "created": "A new Member is created with identifier {{ param }}",
+            "updated": "A Member is updated with identifier {{ param }}",
+            "deleted": "A Member is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Member {{ id }}?"
+            },
+            "detail": {
+                "title": "Member"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "title": "Title",
+            "sex": "Sex",
+            "birthdate": "Birthdate",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "entryDate": "Entry Date",
+            "terminationDate": "Termination Date",
+            "exitDate": "Exit Date",
+            "streetAddress": "Street Address",
+            "postalCode": "Postal Code",
+            "city": "City",
+            "province": "Province",
+            "country": "Country",
+            "vote": "Vote",
+            "oerv": "Oerv",
+            "comment": "Comment"
+        }
+    }
+}

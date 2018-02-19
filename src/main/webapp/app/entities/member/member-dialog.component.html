@@ -1,0 +1,143 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myMemberLabel" jhiTranslate="clubadminApp.member.home.createOrEditLabel">Create or edit a Member</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!member.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="member.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.firstName" for="field_firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                [(ngModel)]="member.firstName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.lastName" for="field_lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                [(ngModel)]="member.lastName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                [(ngModel)]="member.title" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.sex" for="field_sex">Sex</label>
+            <select class="form-control" name="sex" [(ngModel)]="member.sex" id="field_sex" >
+                <option value="MALE">{{'clubadminApp.Sex.MALE' | translate}}</option>
+                <option value="FEMALE">{{'clubadminApp.Sex.FEMALE' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.birthdate" for="field_birthdate">Birthdate</label>
+            <div class="input-group">
+                <input id="field_birthdate" type="text" class="form-control" name="birthdate" ngbDatepicker  #birthdateDp="ngbDatepicker" [(ngModel)]="member.birthdate"
+                />
+                <span class="input-group-append">
+                    <button type="button" class="btn btn-secondary" (click)="birthdateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                [(ngModel)]="member.email" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.phoneNumber" for="field_phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                [(ngModel)]="member.phoneNumber" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.entryDate" for="field_entryDate">Entry Date</label>
+            <div class="input-group">
+                <input id="field_entryDate" type="text" class="form-control" name="entryDate" ngbDatepicker  #entryDateDp="ngbDatepicker" [(ngModel)]="member.entryDate"
+                />
+                <span class="input-group-append">
+                    <button type="button" class="btn btn-secondary" (click)="entryDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.terminationDate" for="field_terminationDate">Termination Date</label>
+            <div class="input-group">
+                <input id="field_terminationDate" type="text" class="form-control" name="terminationDate" ngbDatepicker  #terminationDateDp="ngbDatepicker" [(ngModel)]="member.terminationDate"
+                />
+                <span class="input-group-append">
+                    <button type="button" class="btn btn-secondary" (click)="terminationDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.exitDate" for="field_exitDate">Exit Date</label>
+            <div class="input-group">
+                <input id="field_exitDate" type="text" class="form-control" name="exitDate" ngbDatepicker  #exitDateDp="ngbDatepicker" [(ngModel)]="member.exitDate"
+                />
+                <span class="input-group-append">
+                    <button type="button" class="btn btn-secondary" (click)="exitDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.streetAddress" for="field_streetAddress">Street Address</label>
+            <input type="text" class="form-control" name="streetAddress" id="field_streetAddress"
+                [(ngModel)]="member.streetAddress" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.postalCode" for="field_postalCode">Postal Code</label>
+            <input type="text" class="form-control" name="postalCode" id="field_postalCode"
+                [(ngModel)]="member.postalCode" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                [(ngModel)]="member.city" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.province" for="field_province">Province</label>
+            <input type="text" class="form-control" name="province" id="field_province"
+                [(ngModel)]="member.province" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                [(ngModel)]="member.country" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.vote" for="field_vote">Vote</label>
+            <input type="checkbox" class="form-control" name="vote" id="field_vote"
+                [(ngModel)]="member.vote" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.oerv" for="field_oerv">Oerv</label>
+            <input type="checkbox" class="form-control" name="oerv" id="field_oerv"
+                [(ngModel)]="member.oerv" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="clubadminApp.member.comment" for="field_comment">Comment</label>
+            <input type="text" class="form-control" name="comment" id="field_comment"
+                [(ngModel)]="member.comment" maxlength="4000"/>
+            <div [hidden]="!(editForm.controls.comment?.dirty && editForm.controls.comment?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.comment?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 4000 }">
+                   This field cannot be longer than 4000 characters.
+                </small>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
