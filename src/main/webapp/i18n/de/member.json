@@ -3,38 +3,38 @@
     "clubadminApp": {
         "member" : {
             "home": {
-                "title": "Members",
-                "createLabel": "Member erstellen",
-                "createOrEditLabel": "Member erstellen oder bearbeiten"
+                "title": "Mitglieder",
+                "createLabel": "Mitglied erstellen",
+                "createOrEditLabel": "Mitglied erstellen oder bearbeiten"
             },
-            "created": "Member erstellt mit ID {{ param }}",
-            "updated": "Member aktualisiert mit ID {{ param }}",
-            "deleted": "Member gelöscht mit ID {{ param }}",
+            "created": "Mitglied erstellt mit ID {{ param }}",
+            "updated": "Mitglied aktualisiert mit ID {{ param }}",
+            "deleted": "Mitglied gelöscht mit ID {{ param }}",
             "delete": {
-                "question": "Soll Member {{ id }} wirklich dauerhaft gelöscht werden?"
+                "question": "Soll Mitglied {{ id }} wirklich dauerhaft gelöscht werden?"
             },
             "detail": {
-                "title": "Member"
+                "title": "Mitglied"
             },
-            "firstName": "First Name",
-            "lastName": "Last Name",
-            "title": "Title",
-            "sex": "Sex",
-            "birthdate": "Birthdate",
-            "email": "Email",
-            "phoneNumber": "Phone Number",
-            "entryDate": "Entry Date",
-            "terminationDate": "Termination Date",
-            "exitDate": "Exit Date",
-            "streetAddress": "Street Address",
-            "postalCode": "Postal Code",
-            "city": "City",
-            "province": "Province",
-            "vote": "Vote",
-            "oerv": "Oerv",
-            "comment": "Comment",
-            "country": "Country",
-            "contributionGroup": "Contribution Group"
+            "firstName": "Vorname",
+            "lastName": "Nachname",
+            "title": "Titel",
+            "sex": "Geschlecht",
+            "birthdate": "Geburtstag",
+            "email": "E-Mail",
+            "phoneNumber": "Telefonnummer",
+            "entryDate": "Eintrittsdatum",
+            "terminationDate": "Kündigungsdatum",
+            "exitDate": "Austrittsdatum",
+            "streetAddress": "Adresse",
+            "postalCode": "Postleitzahl",
+            "city": "Stadt",
+            "province": "Bundesland",
+            "vote": "Stimme",
+            "oerv": "ÖRV",
+            "comment": "Kommentar",
+            "country": "Land",
+            "contributionGroup": "Beitragsgruppe"
         }
     }
 }

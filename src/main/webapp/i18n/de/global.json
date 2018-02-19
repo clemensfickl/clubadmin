@@ -7,12 +7,12 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entitäten",
-                "member": "Member",
-                "country": "Country",
-                "trainingGroup": "Training Group",
-                "groupMember": "Group Member",
-                "contributionGroup": "Contribution Group",
-                "contributionGroupEntry": "Contribution Group Entry",
+                "member": "Mitglied",
+                "country": "Land",
+                "trainingGroup": "Trainingsgruppe",
+                "groupMember": "Gruppenmitglied",
+                "contributionGroup": "Beitragsgruppe",
+                "contributionGroupEntry": "Beitragsgruppeneintrag",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -16,24 +16,12 @@
         <table class="table table-striped">
             <thead>
             <tr>
-            <th><span jhiTranslate="global.field.id">ID</span></th>
             <th><span jhiTranslate="clubadminApp.member.firstName">First Name</span></th>
             <th><span jhiTranslate="clubadminApp.member.lastName">Last Name</span></th>
-            <th><span jhiTranslate="clubadminApp.member.title">Title</span></th>
-            <th><span jhiTranslate="clubadminApp.member.sex">Sex</span></th>
-            <th><span jhiTranslate="clubadminApp.member.birthdate">Birthdate</span></th>
-            <th><span jhiTranslate="clubadminApp.member.email">Email</span></th>
-            <th><span jhiTranslate="clubadminApp.member.phoneNumber">Phone Number</span></th>
             <th><span jhiTranslate="clubadminApp.member.entryDate">Entry Date</span></th>
-            <th><span jhiTranslate="clubadminApp.member.terminationDate">Termination Date</span></th>
             <th><span jhiTranslate="clubadminApp.member.exitDate">Exit Date</span></th>
-            <th><span jhiTranslate="clubadminApp.member.streetAddress">Street Address</span></th>
-            <th><span jhiTranslate="clubadminApp.member.postalCode">Postal Code</span></th>
-            <th><span jhiTranslate="clubadminApp.member.city">City</span></th>
-            <th><span jhiTranslate="clubadminApp.member.province">Province</span></th>
             <th><span jhiTranslate="clubadminApp.member.vote">Vote</span></th>
             <th><span jhiTranslate="clubadminApp.member.oerv">Oerv</span></th>
-            <th><span jhiTranslate="clubadminApp.member.comment">Comment</span></th>
             <th><span jhiTranslate="clubadminApp.member.country">Country</span></th>
             <th><span jhiTranslate="clubadminApp.member.contributionGroup">Contribution Group</span></th>
             <th></th>
@@ -41,24 +29,20 @@
             </thead>
             <tbody>
             <tr *ngFor="let member of members ;trackBy: trackId">
-                <td><a [routerLink]="['../member', member.id ]">{{member.id}}</a></td>
-                <td>{{member.firstName}}</td>
+                <td><a [routerLink]="['../member', member.id ]">{{member.firstName}}</a></td>
                 <td>{{member.lastName}}</td>
-                <td>{{member.title}}</td>
-                <td jhiTranslate="{{'clubadminApp.Sex.' + member.sex}}">{{member.sex}}</td>
-                <td>{{member.birthdate | date:'mediumDate'}}</td>
-                <td>{{member.email}}</td>
-                <td>{{member.phoneNumber}}</td>
                 <td>{{member.entryDate | date:'mediumDate'}}</td>
-                <td>{{member.terminationDate | date:'mediumDate'}}</td>
                 <td>{{member.exitDate | date:'mediumDate'}}</td>
-                <td>{{member.streetAddress}}</td>
-                <td>{{member.postalCode}}</td>
-                <td>{{member.city}}</td>
-                <td>{{member.province}}</td>
-                <td>{{member.vote}}</td>
-                <td>{{member.oerv}}</td>
-                <td>{{member.comment}}</td>
+                <td>
+                    <div *ngIf="member.vote">
+                        <span class="fa fa-check-square-o"></span>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="member.oerv">
+                        <span class="fa fa-check-square-o"></span>
+                    </div>
+                </td>
                 <td>
                     <div *ngIf="member.countryId">
                         <a [routerLink]="['../country', member.countryId  ]" >{{member.countryName}}</a>
