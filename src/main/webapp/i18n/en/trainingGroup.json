@@ -1,0 +1,22 @@
+
+{
+    "clubadminApp": {
+        "trainingGroup" : {
+            "home": {
+                "title": "Training Groups",
+                "createLabel": "Create a new Training Group",
+                "createOrEditLabel": "Create or edit a Training Group"
+            },
+            "created": "A new Training Group is created with identifier {{ param }}",
+            "updated": "A Training Group is updated with identifier {{ param }}",
+            "deleted": "A Training Group is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Training Group {{ id }}?"
+            },
+            "detail": {
+                "title": "Training Group"
+            },
+            "name": "Name"
+        }
+    }
+}

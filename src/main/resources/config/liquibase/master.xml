@@ -5,6 +5,15 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212257_added_entity_Member.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212258_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212259_added_entity_TrainingGroup.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212300_added_entity_GroupMember.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212301_added_entity_ContributionGroup.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212302_added_entity_ContributionGroupEntry.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20180219212257_added_entity_constraints_Member.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212300_added_entity_constraints_GroupMember.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180219212302_added_entity_constraints_ContributionGroupEntry.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

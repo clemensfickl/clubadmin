@@ -1,0 +1,36 @@
+
+<div *ngIf="contributionGroupEntry">
+    <h2><span jhiTranslate="clubadminApp.contributionGroupEntry.detail.title">Contribution Group Entry</span> {{contributionGroupEntry.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="clubadminApp.contributionGroupEntry.year">Year</span></dt>
+        <dd>
+            <span>{{contributionGroupEntry.year}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.contributionGroupEntry.amount">Amount</span></dt>
+        <dd>
+            <span>{{contributionGroupEntry.amount}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.contributionGroupEntry.group">Group</span></dt>
+        <dd>
+            <div *ngIf="contributionGroupEntry.groupId">
+                <a [routerLink]="['/contribution-group', contributionGroupEntry.groupId]">{{contributionGroupEntry.groupName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'contribution-group-entry/'+ contributionGroupEntry.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

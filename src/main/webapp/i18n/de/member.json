@@ -1,0 +1,40 @@
+
+{
+    "clubadminApp": {
+        "member" : {
+            "home": {
+                "title": "Members",
+                "createLabel": "Member erstellen",
+                "createOrEditLabel": "Member erstellen oder bearbeiten"
+            },
+            "created": "Member erstellt mit ID {{ param }}",
+            "updated": "Member aktualisiert mit ID {{ param }}",
+            "deleted": "Member gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Member {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Member"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "title": "Title",
+            "sex": "Sex",
+            "birthdate": "Birthdate",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "entryDate": "Entry Date",
+            "terminationDate": "Termination Date",
+            "exitDate": "Exit Date",
+            "streetAddress": "Street Address",
+            "postalCode": "Postal Code",
+            "city": "City",
+            "province": "Province",
+            "vote": "Vote",
+            "oerv": "Oerv",
+            "comment": "Comment",
+            "country": "Country",
+            "contributionGroup": "Contribution Group"
+        }
+    }
+}

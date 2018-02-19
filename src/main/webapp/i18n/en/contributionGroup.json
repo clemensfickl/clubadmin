@@ -1,0 +1,22 @@
+
+{
+    "clubadminApp": {
+        "contributionGroup" : {
+            "home": {
+                "title": "Contribution Groups",
+                "createLabel": "Create a new Contribution Group",
+                "createOrEditLabel": "Create or edit a Contribution Group"
+            },
+            "created": "A new Contribution Group is created with identifier {{ param }}",
+            "updated": "A Contribution Group is updated with identifier {{ param }}",
+            "deleted": "A Contribution Group is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Contribution Group {{ id }}?"
+            },
+            "detail": {
+                "title": "Contribution Group"
+            },
+            "name": "Name"
+        }
+    }
+}

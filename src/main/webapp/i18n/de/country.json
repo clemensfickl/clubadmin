@@ -1,0 +1,23 @@
+
+{
+    "clubadminApp": {
+        "country" : {
+            "home": {
+                "title": "Countries",
+                "createLabel": "Country erstellen",
+                "createOrEditLabel": "Country erstellen oder bearbeiten"
+            },
+            "created": "Country erstellt mit ID {{ param }}",
+            "updated": "Country aktualisiert mit ID {{ param }}",
+            "deleted": "Country gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Country {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Country"
+            },
+            "name": "Name",
+            "shortCode": "Short Code"
+        }
+    }
+}

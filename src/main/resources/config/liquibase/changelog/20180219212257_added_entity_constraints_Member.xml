@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Member.
+    -->
+    <changeSet id="20180219212257-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="country_id"
+                                 baseTableName="member"
+                                 constraintName="fk_member_country_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="country"/>
+
+        <addForeignKeyConstraint baseColumnNames="contribution_group_id"
+                                 baseTableName="member"
+                                 constraintName="fk_member_contribution_group_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="contribution_group"/>
+
+    </changeSet>
+</databaseChangeLog>

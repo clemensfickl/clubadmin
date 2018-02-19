@@ -1,0 +1,60 @@
+entity Member {
+	firstName String,
+	lastName String,
+    title String,
+    sex Sex,
+    birthdate LocalDate,
+	email String,
+	phoneNumber String,
+	entryDate LocalDate,
+    terminationDate LocalDate,
+    exitDate LocalDate,
+	streetAddress String,
+	postalCode String,
+	city String,
+	province String,
+    vote Boolean,
+    oerv Boolean,
+    comment String maxlength(4000)
+}
+
+enum Sex {
+MALE, FEMALE
+}
+
+entity Country {
+	name String,
+    shortCode String
+}
+
+entity TrainingGroup {
+	name String
+}
+
+entity GroupMember {
+	startDate LocalDate,
+    endDate LocalDate
+}
+
+entity ContributionGroup {
+	name String
+}
+
+entity ContributionGroupEntry {
+	year Integer,
+    amount BigDecimal
+}
+
+relationship ManyToOne {
+	Member{country(name)} to Country
+    Member{contributionGroup(name)} to ContributionGroup
+    GroupMember{group(name)} to TrainingGroup
+    GroupMember{member} to Member
+    ContributionGroupEntry{group(name)} to ContributionGroup
+}
+
+// paginate Member with infinite-scroll
+
+dto * with mapstruct
+
+service all with serviceImpl

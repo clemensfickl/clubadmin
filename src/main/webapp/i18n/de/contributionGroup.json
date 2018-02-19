@@ -1,0 +1,22 @@
+
+{
+    "clubadminApp": {
+        "contributionGroup" : {
+            "home": {
+                "title": "Contribution Groups",
+                "createLabel": "Contribution Group erstellen",
+                "createOrEditLabel": "Contribution Group erstellen oder bearbeiten"
+            },
+            "created": "Contribution Group erstellt mit ID {{ param }}",
+            "updated": "Contribution Group aktualisiert mit ID {{ param }}",
+            "deleted": "Contribution Group gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Contribution Group {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Contribution Group"
+            },
+            "name": "Name"
+        }
+    }
+}

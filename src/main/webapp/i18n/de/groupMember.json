@@ -1,0 +1,25 @@
+
+{
+    "clubadminApp": {
+        "groupMember" : {
+            "home": {
+                "title": "Group Members",
+                "createLabel": "Group Member erstellen",
+                "createOrEditLabel": "Group Member erstellen oder bearbeiten"
+            },
+            "created": "Group Member erstellt mit ID {{ param }}",
+            "updated": "Group Member aktualisiert mit ID {{ param }}",
+            "deleted": "Group Member gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Group Member {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Group Member"
+            },
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "group": "Group",
+            "member": "Member"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+
+{
+    "clubadminApp": {
+        "contributionGroupEntry" : {
+            "home": {
+                "title": "Contribution Group Entries",
+                "createLabel": "Create a new Contribution Group Entry",
+                "createOrEditLabel": "Create or edit a Contribution Group Entry"
+            },
+            "created": "A new Contribution Group Entry is created with identifier {{ param }}",
+            "updated": "A Contribution Group Entry is updated with identifier {{ param }}",
+            "deleted": "A Contribution Group Entry is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Contribution Group Entry {{ id }}?"
+            },
+            "detail": {
+                "title": "Contribution Group Entry"
+            },
+            "year": "Year",
+            "amount": "Amount",
+            "group": "Group"
+        }
+    }
+}

@@ -42,6 +42,12 @@ public class CacheConfiguration {
             cm.createCache(at.fickl.clubadmin.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(at.fickl.clubadmin.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(at.fickl.clubadmin.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(at.fickl.clubadmin.domain.Member.class.getName(), jcacheConfiguration);
+            cm.createCache(at.fickl.clubadmin.domain.Country.class.getName(), jcacheConfiguration);
+            cm.createCache(at.fickl.clubadmin.domain.TrainingGroup.class.getName(), jcacheConfiguration);
+            cm.createCache(at.fickl.clubadmin.domain.GroupMember.class.getName(), jcacheConfiguration);
+            cm.createCache(at.fickl.clubadmin.domain.ContributionGroup.class.getName(), jcacheConfiguration);
+            cm.createCache(at.fickl.clubadmin.domain.ContributionGroupEntry.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

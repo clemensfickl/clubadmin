@@ -1,0 +1,102 @@
+
+<div *ngIf="member">
+    <h2><span jhiTranslate="clubadminApp.member.detail.title">Member</span> {{member.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="clubadminApp.member.firstName">First Name</span></dt>
+        <dd>
+            <span>{{member.firstName}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{member.lastName}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.title">Title</span></dt>
+        <dd>
+            <span>{{member.title}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.sex">Sex</span></dt>
+        <dd>
+            <span jhiTranslate="{{'clubadminApp.Sex.' + member.sex}}">{{member.sex}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.birthdate">Birthdate</span></dt>
+        <dd>
+            <span>{{member.birthdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.email">Email</span></dt>
+        <dd>
+            <span>{{member.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{member.phoneNumber}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.entryDate">Entry Date</span></dt>
+        <dd>
+            <span>{{member.entryDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.terminationDate">Termination Date</span></dt>
+        <dd>
+            <span>{{member.terminationDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.exitDate">Exit Date</span></dt>
+        <dd>
+            <span>{{member.exitDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.streetAddress">Street Address</span></dt>
+        <dd>
+            <span>{{member.streetAddress}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.postalCode">Postal Code</span></dt>
+        <dd>
+            <span>{{member.postalCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.city">City</span></dt>
+        <dd>
+            <span>{{member.city}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.province">Province</span></dt>
+        <dd>
+            <span>{{member.province}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.vote">Vote</span></dt>
+        <dd>
+            <span>{{member.vote}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.oerv">Oerv</span></dt>
+        <dd>
+            <span>{{member.oerv}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.comment">Comment</span></dt>
+        <dd>
+            <span>{{member.comment}}</span>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.country">Country</span></dt>
+        <dd>
+            <div *ngIf="member.countryId">
+                <a [routerLink]="['/country', member.countryId]">{{member.countryName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="clubadminApp.member.contributionGroup">Contribution Group</span></dt>
+        <dd>
+            <div *ngIf="member.contributionGroupId">
+                <a [routerLink]="['/contribution-group', member.contributionGroupId]">{{member.contributionGroupName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'member/'+ member.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
